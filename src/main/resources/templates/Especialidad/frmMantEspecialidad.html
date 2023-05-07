@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head >
+<meta charset="UTF-8">
+</head>
+<body>
+
+<nav ></nav>
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id Especialidad</th>
+      <th scope="col">Nombre Especialidad</th>
+      <th scope="col">Costo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="especialidad :${listaEspecialidad}">
+      <td th:text="${especialidad.idesp}"></td>
+      <td th:text="${especialidad.nomesp}"></td>
+      <td th:text="${especialidad.costo}"></td>
+    </tr>    
+  </tbody>
+</table>
+
+<div class="text-center">
+				<button type="submit" 
+				class="btn btn-primary" onclick="window.location.href='http://localhost:8080/Especialidad/frmRegEspecialidad'">Ir a Registro</button>				
+			</div>
+
+</body>
+</html>
